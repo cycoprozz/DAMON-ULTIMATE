@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { AIAssistantButton } from "@/components/ai/AIAssistantButton";
+import { SupabaseProvider } from "@/contexts/SupabaseContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} h-full antialiased`}>
-        <AuthProvider>
-          <div className="min-h-full flex flex-col">
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-            <AIAssistantButton />
-          </div>
-        </AuthProvider>
+        <SupabaseProvider>
+          <AuthProvider>
+            <div className="min-h-full flex flex-col">
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+              <AIAssistantButton />
+            </div>
+          </AuthProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );
