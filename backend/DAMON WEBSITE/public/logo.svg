@@ -1,0 +1,51 @@
+<svg width="140" height="50" viewBox="0 0 140 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Caribbean Flag Colors Background -->
+  <defs>
+    <linearGradient id="caribGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="33%" style="stop-color:#DC143C"/>
+      <stop offset="66%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#008B8B"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#DC143C"/>
+      <stop offset="100%" style="stop-color:#228B22"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="140" height="50" rx="12" fill="url(#caribGradient)" opacity="0.9"/>
+  <rect width="140" height="50" rx="12" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Palm tree icon -->
+  <g transform="translate(12, 8)">
+    <!-- Palm fronds -->
+    <path d="M10 12 C8 8, 12 6, 14 10" stroke="#228B22" stroke-width="2" fill="none"/>
+    <path d="M10 12 C12 8, 16 6, 18 10" stroke="#228B22" stroke-width="2" fill="none"/>
+    <path d="M10 12 C6 8, 2 10, 4 14" stroke="#228B22" stroke-width="2" fill="none"/>
+    <path d="M10 12 C14 8, 18 10, 16 14" stroke="#228B22" stroke-width="2" fill="none"/>
+    <!-- Trunk -->
+    <line x1="10" y1="12" x2="10" y2="24" stroke="#8B4513" stroke-width="3"/>
+    <!-- Coconuts -->
+    <circle cx="8" cy="14" r="1.5" fill="#8B4513"/>
+    <circle cx="12" cy="13" r="1.5" fill="#8B4513"/>
+  </g>
+  
+  <!-- Main text "CARIB LIFE" -->
+  <text x="45" y="22" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" text-anchor="start" fill="white" stroke="rgba(0,0,0,0.3)" stroke-width="0.5">CARIB LIFE</text>
+  
+  <!-- "MEDIA" text -->
+  <text x="45" y="35" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="start" fill="white" opacity="0.95">MEDIA™</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="125" cy="15" r="2" fill="#FFD700" opacity="0.8"/>
+  <circle cx="130" cy="25" r="1.5" fill="#DC143C" opacity="0.8"/>
+  <circle cx="120" cy="35" r="1.8" fill="#228B22" opacity="0.8"/>
+  
+  <!-- Sparkle effects -->
+  <g opacity="0.7">
+    <path d="M35 10 L37 12 L35 14 L33 12 Z" fill="white"/>
+    <path d="M115 20 L116.5 21.5 L115 23 L113.5 21.5 Z" fill="white"/>
+  </g>
+</svg>

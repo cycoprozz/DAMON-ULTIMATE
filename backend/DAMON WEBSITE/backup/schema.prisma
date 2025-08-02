@@ -1,0 +1,204 @@
+// This is your Prisma schema file
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication and client information
+model User {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  email         String    @unique
+  passwordHash  String
+  firstName     String
+  lastName      String
+  company       String?
+  phone         String?
+  role          UserRole  @default(CLIENT)
+  status        UserStatus @default(ACTIVE)
+  
+  // Relations
+  profile       Profile?
+  orders        Order[]
+  files         File[]
+  messages      Message[]
+
+  @@map("users")
+}
+
+// User profile with additional details
+model Profile {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  avatar      String?
+  bio         String?
+  address     String?
+  city        String?
+  state       String?
+  zipCode     String?
+  preferences Json?
+  
+  // Relations
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("profiles")
+}
+
+// Service categories (e.g., Video Production, Social Media, etc.)
+model ServiceCategory {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  description String?
+  slug        String    @unique
+  image       String?
+  
+  // Relations
+  services    Service[]
+
+  @@map("service_categories")
+}
+
+// Individual services within categories
+model Service {
+  id          String    @id @default(cuid())
+  categoryId  String
+  name        String
+  description String
+  price       Float
+  duration    String?
+  image       String?
+  features    Json?
+  status      ServiceStatus @default(ACTIVE)
+  
+  // Relations
+  category    ServiceCategory @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]
+
+  @@map("services")
+}
+
+// Orders/bookings made by clients
+model Order {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  status      OrderStatus @default(PENDING)
+  total       Float
+  stripeId    String?   // For payment tracking
+  
+  // Relations
+  user        User      @relation(fields: [userId], references: [id])
+  items       OrderItem[]
+  payments    Payment[]
+
+  @@map("orders")
+}
+
+// Individual items within an order
+model OrderItem {
+  id          String    @id @default(cuid())
+  orderId     String
+  serviceId   String
+  quantity    Int
+  price       Float
+  
+  // Relations
+  order       Order     @relation(fields: [orderId], references: [id])
+  service     Service   @relation(fields: [serviceId], references: [id])
+
+  @@map("order_items")
+}
+
+// Payment records
+model Payment {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  orderId     String
+  amount      Float
+  status      PaymentStatus @default(PENDING)
+  stripeId    String?
+  
+  // Relations
+  order       Order     @relation(fields: [orderId], references: [id])
+
+  @@map("payments")
+}
+
+// File management
+model File {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  userId      String
+  name        String
+  type        String
+  size        Int
+  url         String
+  
+  // Relations
+  user        User      @relation(fields: [userId], references: [id])
+
+  @@map("files")
+}
+
+// Communication/messages
+model Message {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  userId      String
+  subject     String
+  content     String
+  status      MessageStatus @default(UNREAD)
+  
+  // Relations
+  user        User      @relation(fields: [userId], references: [id])
+
+  @@map("messages")
+}
+
+// Enums
+enum UserRole {
+  ADMIN
+  STAFF
+  CLIENT
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum ServiceStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  ARCHIVED
+}

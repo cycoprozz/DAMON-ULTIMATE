@@ -1,0 +1,108 @@
+{
+  "home": {
+    "title": "Black Digital Storytelling | Carib Life Media™",
+    "meta_description": "Explore the art of black digital storytelling with Carib Life Media™, your premier source for engaging documentaries and social media content production.",
+    "sections": {
+      "hero": {
+        "heading": "Welcome to Carib Life Media™!",
+        "tagline": "Try our social media production services!"
+      },
+      "about": {
+        "heading": "Our Story",
+        "content": "Founded in 2019 by visionary producer Damon \"Bware\" Vanzant, Carib Life Media™ stands as a premier full-service television production and media company dedicated to curating a rich tapestry of Black cultural programming. With an unwavering commitment to authenticity and excellence, Carib Life Media™ serves as a dynamic platform for showcasing the vibrant narratives of the diverse peoples of the African diaspora."
+      },
+      "team": {
+        "heading": "Our Team",
+        "content": "Our team features highly qualified and experienced marketing, publicity, social media, and production professionals of Caribbean descent that deliver the best quality services in our market. At Carib Life Media, we value teamwork, integrity, creativity, continuous improvement, and pride to represent the culture!"
+      },
+      "services": {
+        "heading": "Our services",
+        "items": [
+          {
+            "title": "Top Quality Video, Film, & Digital Content Production",
+            "description": "We develop proprietary content such as exclusive interviews, docuseries, reality, drama series, and stimulates interaction amongst members of the Caribbean Diaspora market."
+          },
+          {
+            "title": "Artist & Event Promotion",
+            "description": "We create black documentaries, reality TV series, and digital promotional materials for cutting edge reggae, soca, dancehall, afrobeats artists, and events."
+          },
+          {
+            "title": "Product Advertisement",
+            "description": "We feature Caribbean-owned business' products and services through commercial segments on our internationally aired tv programs."
+          }
+        ]
+      },
+      "contact": {
+        "address": "1445 Woodmont Ln NW #537 Atlanta, GA 30318-2866",
+        "phone": "240-244-9427",
+        "email": "info@cariblifemedia.com"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "meta_description": "Celebrating diverse diasporic voices with authenticity, we offer exclusive social media services, crafting strategic content for brand growth.",
+    "packages": {
+      "monthly": {
+        "title": "Monthly Package",
+        "features": [
+          "Content Planning",
+          "Filming",
+          "Editing",
+          "Delivery"
+        ],
+        "description": "Access a month of expertly crafted social media content production, tailored to your brand's needs and ready for seamless sharing across platforms."
+      },
+      "quarterly": {
+        "title": "Quarterly Package",
+        "features": [
+          "Extended Content Planning",
+          "Additional Filming Sessions",
+          "Priority Editing",
+          "Quarterly Strategy Review"
+        ],
+        "description": "Elevate your social media presence with a comprehensive three-month plan, including strategic content production and performance evaluation to ensure continuous growth."
+      },
+      "yearly": {
+        "title": "Yearly Package",
+        "features": [
+          "Comprehensive Content Strategy",
+          "Flexible Filming Sessions",
+          "Dedicated Account Manager",
+          "Annual Performance Analysis"
+        ],
+        "description": "Secure a year-long partnership for unparalleled social media content production, offering a full spectrum of services and personalized support to propel your brand to new heights of success."
+      }
+    },
+    "miniDocumentary": {
+      "title": "Social Media Mini-Documentary Production Services",
+      "description": "Are you an influencer looking to immortalize your special events in captivating mini-documentaries? Look no further than Carib Life Media™!",
+      "features": {
+        "contentPlanning": "Our expert team will work closely with you to outline the storyline and key moments to be captured in your mini-documentary.",
+        "filming": "Our skilled videographers will be on-site to capture every special moment, from behind-the-scenes preparations to the highlight reel of your event.",
+        "editing": "Utilizing state-of-the-art editing techniques, we'll weave together footage from your event into a visually stunning and emotionally engaging narrative.",
+        "delivery": "Once the editing process is complete, we'll deliver the finalized mini-documentary ready for sharing on your social media platforms."
+      }
+    }
+  },
+  "caribLifeAtl": {
+    "title": "Carib Life ATL",
+    "sections": {
+      "hero": {
+        "heading": "Welcome to Carib Life ATL",
+        "subheading": "Are you ready to Fete?"
+      },
+      "trailer": {
+        "heading": "Carib Life ATL season 1 Trailer/Sizzle",
+        "description": "Check out the greatest mass highlights from Carib Life ATL Season One!"
+      },
+      "broadcast": {
+        "heading": "Carib Life ATL airs in over 18 Caribbean countries, plus the U.S. and Canada!"
+      }
+    }
+  },
+  "assets": {
+    "logo": "//img1.wsimg.com/isteam/ip/784265af-92f9-40d7-a43d-6b170a37c57d/cariblifemedialogo.png",
+    "images": []
+  }
+}
